@@ -1,1 +1,1 @@
-# My-portfolio
+This repository hosts my professional Cybersecurity Portfolio, a custom-built web interface designed to showcase my technical skills, certifications, and projects. Built with a "Cyber UI" aesthetic, it utilizes HTML5 Canvas for real-time animations and CSS Snap-Scrolling for a seamless user experience. It serves as a centralized hub for recruiters to view my background and access my Resume Vault in a fully interactive, secure environment.
