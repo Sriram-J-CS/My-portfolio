@@ -1,0 +1,350 @@
+/* --- SYSTEM CORE --- */
+:root { 
+    --cyan: #00ffcc; 
+    --bg: #010103; 
+    --pink: #ff0077; 
+    --blue: #0088ff;
+    --glass: rgba(0, 255, 204, 0.05);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    cursor: none; /* Custom Cursor Active */
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body { 
+    background: var(--bg); 
+    color: #fff; 
+    font-family: 'Share Tech Mono', monospace; 
+    overflow: hidden; /* Locked for Snap Scrolling */
+}
+
+/* --- CYBER UI ELEMENTS (SITE-WIDE) --- */
+.scanlines { 
+    position: fixed; 
+    inset: 0; 
+    pointer-events: none; 
+    z-index: 9999; 
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%); 
+    background-size: 100% 4px; 
+}
+
+.grid-background { 
+    position: fixed; 
+    inset: 0; 
+    z-index: -1; 
+    background-image: linear-gradient(rgba(0, 255, 204, 0.05) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(0, 255, 204, 0.05) 1px, transparent 1px); 
+    background-size: 50px 50px; 
+    transform: perspective(1000px) rotateX(20deg); 
+    opacity: 0.5; 
+}
+
+canvas#matrix-canvas { 
+    position: fixed; 
+    inset: 0; 
+    z-index: -2; 
+    opacity: 0.2; 
+}
+
+/* --- CUSTOM CURSOR --- */
+.cursor { 
+    position: fixed; 
+    width: 10px; 
+    height: 10px; 
+    background: var(--cyan); 
+    border-radius: 50%; 
+    pointer-events: none; 
+    z-index: 11000; 
+    transform: translate(-50%, -50%); 
+    box-shadow: 0 0 10px var(--cyan); 
+}
+
+.cursor-trail { 
+    position: fixed; 
+    width: 30px; 
+    height: 30px; 
+    border: 1px solid var(--cyan); 
+    border-radius: 50%; 
+    pointer-events: none; 
+    z-index: 10999; 
+    transition: 0.1s ease-out; 
+    transform: translate(-50%, -50%); 
+}
+
+/* --- LOADING PORTAL --- */
+#portal { 
+    position: fixed; 
+    inset: 0; 
+    background: black; 
+    z-index: 10000; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.glitch-logo { 
+    font-size: 80px; 
+    font-family: 'Orbitron'; 
+    color: var(--cyan); 
+    text-shadow: 2px 0 var(--pink); 
+}
+
+.loading-bar-container { 
+    width: 280px; 
+    height: 2px; 
+    background: #111; 
+    margin: 30px 0; 
+}
+
+.loading-bar { 
+    width: 0%; 
+    height: 100%; 
+    background: var(--cyan); 
+    box-shadow: 0 0 15px var(--cyan); 
+}
+
+/* --- NAVIGATION --- */
+.top-nav { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    padding: 20px; 
+    background: rgba(0,0,0,0.95); 
+    z-index: 1000; 
+    border-bottom: 2px solid var(--cyan); 
+}
+
+.nav-inner { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo { font-family: 'Orbitron'; font-weight: 900; letter-spacing: 3px; }
+.logo span { color: var(--cyan); }
+
+.menu a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 0.8rem; 
+    margin-left: 20px; 
+    font-family: 'Orbitron'; 
+    transition: 0.3s;
+}
+
+.menu a:hover { color: var(--cyan); text-shadow: 0 0 8px var(--cyan); }
+
+/* --- SNAP SCROLL LOGIC --- */
+.snap-container { 
+    height: 100vh; 
+    overflow-y: scroll; 
+    scroll-snap-type: y mandatory; 
+}
+
+.snap-section { 
+    height: 100vh; 
+    width: 100vw; 
+    scroll-snap-align: start; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 0; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- HOME SECTION --- */
+.main-title { 
+    font-family: 'Orbitron'; 
+    font-size: clamp(4rem, 15vw, 8.5rem); 
+    font-weight: 900;
+    color: var(--cyan); 
+    margin-bottom: 10px; 
+    letter-spacing: 15px; 
+    text-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    color: var(--pink);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Orbitron';
+}
+
+.bio-frame { 
+    border: 1px solid var(--cyan); 
+    padding: 30px; 
+    background: var(--glass); 
+    max-width: 800px; 
+    line-height: 1.6; 
+    text-align: center;
+    transition: 0.3s;
+}
+
+.bio-frame:hover {
+    box-shadow: 0 0 20px var(--cyan);
+}
+
+/* --- SKILL GRIDS --- */
+.section-tag { 
+    font-family: 'Orbitron'; 
+    color: var(--cyan); 
+    margin-bottom: 30px; 
+    letter-spacing: 3px; 
+    border-left: 5px solid var(--cyan); 
+    padding-left: 15px;
+    align-self: flex-start;
+    margin-left: 10%;
+    width: auto;
+}
+
+.box-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; 
+    width: 80%;
+    max-width: 1100px;
+}
+
+.node { 
+    background: rgba(0,0,0,0.85); 
+    border: 1px solid rgba(0,255,204,0.2); 
+    padding: 40px; 
+    text-align: center; 
+    transition: 0.3s ease; 
+}
+
+/* THE GLOW EFFECT YOU WANTED */
+.node:hover { 
+    border-color: var(--cyan); 
+    transform: translateY(-10px); 
+    box-shadow: 0 0 30px var(--cyan), inset 0 0 10px var(--cyan);
+}
+
+/* --- FULLSCREEN RESUME FIX --- */
+#resume-vault {
+    padding: 0;
+}
+
+.resume-wrapper {
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    max-width: 100%; 
+    border: none;
+    background: #000;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-wrapper embed {
+    width: 100%;
+    height: 100%; /* Fills the entire snap section */
+    border: none;
+}
+
+.vault-controls {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    padding: 10px;
+}
+
+/* --- CONTACT / FOOTER --- */
+.contact-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    width: 80%;
+    max-width: 1100px;
+}
+
+.contact-card { 
+    border: 1px solid var(--cyan); 
+    padding: 30px; 
+    text-align: center; 
+    text-decoration: none; 
+    color: #fff; 
+    font-family: 'Orbitron'; 
+    font-size: 0.9rem;
+    transition: 0.3s; 
+}
+
+.contact-card:hover { 
+    background: var(--cyan); 
+    color: #000; 
+    box-shadow: 0 0 30px var(--cyan);
+}
+
+/* --- UTILS --- */
+.hidden { display: none !important; }
+
+.scroll-reveal { 
+    opacity: 0; 
+    transform: translateY(40px); 
+    transition: 1s ease-out; 
+}
+
+.scroll-reveal.active { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.btn-cyber-mini {
+    display: inline-block;
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-family: 'Orbitron';
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.8);
+    transition: 0.3s;
+}
+
+.btn-cyber-mini:hover {
+    box-shadow: 0 0 20px var(--cyan);
+    background: var(--cyan);
+    color: #000;
+}
+
+/* --- MOBILE ADAPTATION --- */
+@media (max-width: 768px) {
+    .snap-section { 
+        padding: 100px 5% 40px; 
+        justify-content: flex-start; 
+    }
+
+    .main-title { 
+        font-size: 3.2rem; 
+        letter-spacing: 5px; 
+        margin-top: 30px;
+    }
+
+    .resume-wrapper {
+        height: 70vh; /* Better for mobile viewing */
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .cursor, .cursor-trail { 
+        display: none; 
+    }
+
+    * { cursor: auto; }
+}

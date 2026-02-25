@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRIRAM J | Cyber Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <div id="portal">
+        <div class="portal-box">
+            <div class="glitch-logo" data-text="SJ">SJ</div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+            <p id="portal-status">UPLINK_ESTABLISHING...</p>
+            <button id="enter-btn" class="hidden" onclick="enterNexus()">INITIALIZE_SYSTEM</button>
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+    
+    <div class="grid-background"></div>
+    <canvas id="matrix-canvas"></canvas>
+
+    <header class="top-nav">
+        <div class="nav-inner">
+            <div class="logo">PORT<span>FOLIO</span></div>
+            <nav class="menu">
+                <a href="#home">HOME</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#experience">LOGS</a>
+                <a href="#resume-vault">VAULT</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="snap-container" id="content">
+        
+        <section id="home" class="snap-section hero">
+            <div class="hero-container scroll-reveal">
+                <h1 class="main-title">SRIRAM J</h1>
+                <h2 class="sub-title">Cyber Security Student | Sathyabama Institute</h2>
+                <div class="bio-frame">
+                    <p>I am a passionate and growth-driven individual with a strong interest in cybersecurity and modern digital systems. I enjoy analyzing complex problems and approaching challenges with logical and strategic thinking.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="snap-section section-container">
+            <div class="scroll-reveal w-full">
+                <div id="skill-terminal" class="skill-terminal hidden">
+                    <div class="terminal-header">
+                        <span>SYSTEM_DECODER_v1.0</span>
+                        <button onclick="closeTerminal()">CLOSE [X]</button>
+                    </div>
+                    <div id="terminal-content" class="terminal-body"></div>
+                </div>
+
+                <h2 class="section-tag">TECHNICAL_CORE</h2>
+                <div class="box-grid">
+                    <div class="node neon-border" onclick="showSkill('Python')">
+                        <h3>PROGRAMMING</h3>
+                        <p class="click-hint">CLICK TO DECRYPT</p>
+                    </div>
+                    <div class="node neon-border" onclick="showSkill('Tech')">
+                        <h3>TECH SKILLS</h3>
+                        <p class="click-hint">CLICK TO DECRYPT</p>
+                    </div>
+                    <div class="node neon-border" onclick="showSkill('Frontend')">
+                        <h3>FRONT-END</h3>
+                        <p class="click-hint">CLICK TO DECRYPT</p>
+                    </div>
+                </div>
+
+                <h2 class="section-tag" style="margin-top: 40px;">NON_TECHNICAL_PROTOCOLS</h2>
+                <div class="box-grid">
+                    <div class="node neon-border" onclick="showSkill('Soft')">
+                        <h3>SOFT SKILLS</h3>
+                        <p class="click-hint">CLICK TO DECRYPT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="snap-section section-container">
+            <div class="scroll-reveal w-full">
+                <h2 class="section-tag">FIELD_LOGS</h2>
+                <div class="box-grid">
+                    <div class="node neon-border">
+                        <h3>MICROSOFT CLUB</h3>
+                        <p>Security Team Member</p>
+                    </div>
+                    <div class="node neon-border">
+                        <h3>COGNIFYZ TECH</h3>
+                        <p>Intern - Full Stack</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume-vault" class="snap-section section-container">
+            <div class="scroll-reveal w-full">
+                <h2 class="section-tag">SECURE_VAULT</h2>
+                <div class="resume-wrapper neon-border">
+                    <embed src="sriram_updated resume.pdf" type="application/pdf" width="100%" height="450px" />
+                    <div class="vault-controls">
+                        <a href="sriram_updated resume.pdf" class="btn-cyber-mini" download>DOWNLOAD_PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="snap-section footer section-container">
+            <div class="scroll-reveal w-full">
+                <h2 class="section-tag">UPLINK_STATION</h2>
+                <div class="contact-container">
+                    <a href="https://www.linkedin.com/in/sriram-j-4965b8324/" target="_blank" class="contact-card">LINKEDIN</a>
+                    <a href="https://github.com/Sriram-J-CS" target="_blank" class="contact-card">GITHUB</a>
+                    <a href="mailto:sriramj0107@gmail.com" class="contact-card">GMAIL_COMMS</a>
+                </div>
+                <p class="system-time">© 2026 SRIRAM J | SATHYABAMA INSTITUTE</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
