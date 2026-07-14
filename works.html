@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sriram J — Cyber Security &amp; Full-Stack Engineer</title>
-<meta name="description" content="Sriram J — Cyber Security student and full-stack developer building AI-driven intrusion detection systems.">
+<title>Work — Sriram J</title>
+<meta name="description" content="Projects, skills, and upcoming hardware security work by Sriram J.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -379,14 +379,14 @@ section{padding:140px 0;}
 <body>
 <header class="nav" id="siteNav">
   <div class="wrap nav-inner">
-    <a href="#top" class="logo"><span class="logo-mark">SJ</span> Sriram J</a>
+    <a href="index.html" class="logo"><span class="logo-mark">SJ</span> Sriram J</a>
     <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
       <a href="works.html">Work</a>
-      <a href="#ctf">CTF</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="index.html#ctf">CTF</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -394,135 +394,31 @@ section{padding:140px 0;}
   </div>
 </header>
 
-<section class="hero" id="top">
-  <canvas id="network-canvas"></canvas>
-  <div class="wrap hero-content">
-    <div class="eyebrow">CYBER SECURITY &nbsp;×&nbsp; FULL-STACK ENGINEERING</div>
-    <h1 class="hero-title">Sriram <span class="grad-text">J</span></h1>
-    <p class="hero-sub">I build systems that detect and stop threats in real time, and I study offensive security to understand exactly what they're defending against.</p>
-    <div class="hero-actions">
-      <a href="works.html" class="btn btn-primary">View Work</a>
-      <a href="Sriram_J_Resume.pdf" class="btn btn-ghost" download>Download Résumé</a>
-    </div>
-  </div>
-  <div class="scroll-cue"><span>SCROLL</span><span class="line"></span></div>
-</section>
-
-<section id="about">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <div class="eyebrow">ABOUT ME</div>
-      <h2>Curious about how systems break — and how to make them not.</h2>
-    </div>
-    <div class="about-text reveal">
-      <p>I'm a <strong>Cyber Security student</strong> at Sathyabama Institute of Science and Technology, Chennai, currently working toward my B.E. in Computer Science &amp; Engineering. What pulled me into this field wasn't a single class — it was the moment I realised that understanding how systems get broken into is the fastest way to learn how to actually protect them. That's shaped how I work: half the time thinking like a defender, half the time thinking like an attacker.</p>
-      <p>My internship at <strong>Career Solutions</strong> gave me my first real exposure to that mindset in practice — running vulnerability assessments, analyzing traffic with Wireshark and Nmap, and writing up findings the way a security team actually needs them. Before that, interning as a <strong>Full Stack Developer at Cognifyz Technologies</strong> taught me the other half of the equation: how to actually ship software, debug it under pressure, and work like an engineer rather than a student. CTF competitions rounded out the rest, forcing me to get comfortable with reverse engineering, binary exploitation, forensics, cryptography, and OSINT — often with no instructions and no shortcuts.</p>
-      <div class="about-future">
-        <div class="eyebrow">WHAT'S NEXT</div>
-        <p>I'm most interested in the parts of security that are still hard for me — deeper binary exploitation and memory corruption, malware analysis, and cloud security across AWS and Azure. On the engineering side, I want to get better at turning ML-based detection systems from capstone projects into production-grade, low-latency pipelines. I'm actively working toward that through further offensive-security training and by contributing to open-source security tooling.</p>
-      </div>
-      <div class="chip-row">
-        <span class="chip">Network Security</span>
-        <span class="chip">Python</span>
-        <span class="chip">Full-Stack Development</span>
-        <span class="chip">CTF Player</span>
-        <span class="chip">Linux</span>
-        <span class="chip">Always Learning</span>
-      </div>
-    </div>
+<section class="subhero">
+  <canvas id="works-hero-canvas"></canvas>
+  <div class="wrap subhero-content">
+    <div class="eyebrow on-dark">MY WORK</div>
+    <h1>Projects, skills, and what's next.</h1>
+    <p>Everything I've shipped so far, what I picked up building it, and the hardware security work I'm moving into next.</p>
+    <div class="back-home"><a href="index.html">← Back to home</a></div>
   </div>
 </section>
 
-<section class="section-alt" id="experience">
+<section id="projects">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">EXPERIENCE</div>
-      <h2>Where I've worked</h2>
-      <p>Two internships spanning defensive security assessment and full-stack product development.</p>
+      <div class="eyebrow">PROJECTS</div>
+      <h2>What I've built</h2>
+      <p>Full-stack and security work, from a production-style intrusion detection platform to offensive-security drills.</p>
     </div>
 
-    <div class="timeline">
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-meta">
-          <span class="tl-role">Cyber Security Intern</span>
-          <span class="tl-date">MAY 2026 — JUN 2026</span>
+    <div class="work-list reveal-stagger">
+      <div class="work-item">
+        <div class="work-item-head">
+          <h3>CyberGuard Adaptive IDS</h3>
+          <span class="work-tag primary">Featured · Capstone</span>
         </div>
-        <div class="tl-org">Career Solutions · Chennai, India</div>
-        <ul>
-          <li>Performed security assessments and vulnerability analysis on client systems and network infrastructure using Wireshark and Nmap.</li>
-          <li>Authored security reports documenting identified risks, findings, and recommended mitigation strategies.</li>
-          <li>Applied ethical hacking techniques in controlled test environments to evaluate system defenses.</li>
-          <li>Collaborated with the security team on incident response workflows and security awareness activities.</li>
-        </ul>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-meta">
-          <span class="tl-role">Full Stack Developer Intern</span>
-          <span class="tl-date">2025</span>
-        </div>
-        <div class="tl-org">Cognifyz Technologies · Remote</div>
-        <ul>
-          <li>Developed and maintained responsive web application components using HTML5, CSS3, and JavaScript, integrating RESTful APIs and backend services.</li>
-          <li>Participated in debugging, testing, and performance optimization to improve application stability and speed.</li>
-          <li>Applied Git and GitHub version control practices throughout the software development lifecycle.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="work">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">FEATURED PROJECT</div>
-      <h2>CyberGuard Adaptive IDS</h2>
-      <p>An AI-driven network intrusion detection (IDS) and intrusion prevention (IPS) system — built to actually capture, classify, and block real traffic.</p>
-    </div>
-
-    <div class="tilt-wrap reveal">
-    <div class="project-card" id="projectCard">
-      <div class="project-info">
-        <div class="project-head">
-          <div>
-            <h3>Real-time IDS and IPS with a stacked ML pipeline</h3>
-          </div>
-          <a class="gh-btn" href="https://github.com/Sriram-J-CS/cyberGuard-Adaptive-IDS" target="_blank" rel="noopener">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.34-1.11.62-1.36-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.71.12 2.5.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.79-4.58 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-        <p class="project-sub">CyberGuard Adaptive IDS captures live network traffic, extracts flow-level features modeled on the CICIDS2017 benchmark, runs them through a stacked machine-learning pipeline, and automatically blocks confirmed threats at the OS firewall level — wrapped in a real-time monitoring dashboard.</p>
-
-        <div class="stat-row">
-          <div class="stat-pill"><div class="v">98.7%</div><div class="k">Random Forest Accuracy</div></div>
-          <div class="stat-pill"><div class="v">97.4%</div><div class="k">XGBoost Accuracy</div></div>
-          <div class="stat-pill"><div class="v">62</div><div class="k">Flow Metrics Extracted</div></div>
-        </div>
-
-        <div class="project-cols">
-          <div class="project-col">
-            <h4>How it works</h4>
-            <ul>
-              <li>Captures raw Layer 2/3 traffic in real time via Scapy and the Npcap driver.</li>
-              <li>Reconstructs bidirectional flows and extracts 62 metrics per flow, modeled on CICIDS2017.</li>
-              <li>Runs each flow through XGBoost and Random Forest for classification, plus an Isolation Forest for zero-day anomaly detection.</li>
-              <li>Auto-blocks any source IP that crosses a configurable risk threshold, via the host firewall.</li>
-            </ul>
-          </div>
-          <div class="project-col">
-            <h4>What it surfaces</h4>
-            <ul>
-              <li>Explainable AI via SHAP values, showing exactly which flow metric drove each verdict.</li>
-              <li>A live threat map plotting attacker geolocation in real time via GeoIP lookups.</li>
-              <li>An integrated AI security analyst (Claude API) for alert triage and plain-language explanations.</li>
-              <li>Role-separated dashboard access and SMTP alerts for critical intrusions and admin activity.</li>
-            </ul>
-          </div>
-        </div>
-
+        <p>An AI-driven network IDS and IPS that captures live traffic, extracts 62 flow-level metrics modeled on CICIDS2017, and classifies threats through a stacked pipeline — XGBoost (97.4% accuracy), Random Forest (98.7% accuracy), and an Isolation Forest for zero-day anomalies. Confirmed threats are auto-blocked at the OS firewall level. The platform ships with SHAP-based explainability, a live GeoIP threat map, a Claude API–powered alert triage assistant, and a role-separated real-time dashboard.</p>
         <div class="tag-row">
           <span class="tag">Python 3.10+</span>
           <span class="tag">Flask</span>
@@ -530,163 +426,119 @@ section{padding:140px 0;}
           <span class="tag">XGBoost</span>
           <span class="tag">Scikit-learn</span>
           <span class="tag">SHAP</span>
-          <span class="tag">Chart.js</span>
           <span class="tag">Anthropic Claude API</span>
         </div>
-
-        <div class="project-note">Runs locally with administrator/root privileges so it can sniff traffic and manage firewall rules directly — live telemetry requires the Python backend, per the project's own setup docs. MIT licensed.</div>
-        <a href="works.html" class="gh-btn" style="margin-top:20px; display:inline-flex;">See all my work ↗</a>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt" id="ctf">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">CTF &amp; SECURITY COMPETITIONS</div>
-      <h2>Offensive security, five disciplines deep</h2>
-      <p>Structured penetration testing and CTF competitions across reverse engineering, exploitation, forensics, cryptography, and OSINT.</p>
-    </div>
-
-    <div class="ctf-grid reveal-stagger" id="ctfGrid">
-      <div class="ctf-card" data-c="gold">
-        <span class="num">01</span>
-        <div class="ctf-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg>
-        </div>
-        <h3>Reverse Engineering</h3>
-        <p>Analyzed a UPX-packed ELF binary, reversing XOR and arithmetic obfuscation layers to recover the embedded flag.</p>
+        <a class="gh-btn" href="https://github.com/Sriram-J-CS/cyberGuard-Adaptive-IDS" target="_blank" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.34-1.11.62-1.36-2.22-.26-4.56-1.14-4.56-5.05 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.71.12 2.5.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.92-2.35 4.79-4.58 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          View on GitHub
+        </a>
       </div>
 
-      <div class="ctf-card" data-c="copper">
-        <span class="num">02</span>
-        <div class="ctf-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="4" rx="1"/><rect x="4" y="10" width="16" height="4" rx="1"/><rect x="4" y="16" width="10" height="4" rx="1"/></svg>
+      <div class="work-item">
+        <div class="work-item-head">
+          <h3>Full-Stack Web Application Modules</h3>
+          <span class="work-tag">Cognifyz Technologies · Internship</span>
         </div>
-        <h3>Binary Exploitation</h3>
-        <p>Exploited a heap overflow vulnerability (the ovhparse challenge) to gain control of program execution.</p>
+        <p>Built and maintained responsive front-end components with HTML5, CSS3, and JavaScript, wired up to RESTful APIs and backend services. Spent real time debugging, testing, and tuning performance — the unglamorous work that actually teaches you how production software holds together — while following proper Git and GitHub workflows throughout.</p>
+        <div class="tag-row">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Git / GitHub</span>
+        </div>
       </div>
 
-      <div class="ctf-card" data-c="bronze">
-        <span class="num">03</span>
-        <div class="ctf-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="6"/><path d="M20 20l-5.5-5.5"/></svg>
+      <div class="work-item">
+        <div class="work-item-head">
+          <h3>Offensive Security &amp; CTF Challenges</h3>
+          <span class="work-tag security">5 Disciplines</span>
         </div>
-        <h3>Digital Forensics</h3>
-        <p>Recovered secrets from a corrupted disk image by reconstructing and analyzing Git commit history.</p>
-      </div>
-
-      <div class="ctf-card" data-c="olive">
-        <span class="num">04</span>
-        <div class="ctf-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="14" r="3.5"/><path d="M10.8 11.2 20 2M15.5 6.5 18 9M18.5 3.5 21 6"/></svg>
-        </div>
-        <h3>Applied Cryptography</h3>
-        <p>Analyzed a Diffie–Hellman key exchange captured in a pcapng file to recover the shared secret.</p>
-      </div>
-
-      <div class="ctf-card" data-c="rosegold">
-        <span class="num">05</span>
-        <div class="ctf-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>
-        </div>
-        <h3>OSINT</h3>
-        <p>Geolocated a target from a single image using only visual and metadata clues.</p>
-      </div>
-
-      <div class="ctf-card" data-c="charcoal">
-        <span class="num">+</span>
-        <div class="ctf-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z"/></svg>
-        </div>
-        <h3>Penetration Testing</h3>
-        <p>Structured, controlled-environment testing applying ethical hacking techniques to evaluate real system defenses.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">SKILLS</div>
-      <h2>Toolbox</h2>
-      <p>What I reach for, from packet capture to production code.</p>
-    </div>
-
-    <div class="skills-grid reveal-stagger">
-      <div class="skill-group" data-c="gold">
-        <div class="eyebrow">LANGUAGES</div>
-        <div class="skill-tags">
-          <span>Python</span><span>Java</span><span>JavaScript</span><span>C</span><span>SQL</span><span>HTML5</span><span>CSS3</span>
-        </div>
-      </div>
-      <div class="skill-group" data-c="bronze">
-        <div class="eyebrow">SECURITY</div>
-        <div class="skill-tags">
-          <span>Network Security</span><span>Ethical Hacking</span><span>Threat Detection</span><span>Vulnerability Assessment</span><span>Packet Analysis</span><span>Cryptography</span><span>Incident Response</span><span>Secure Coding</span>
-        </div>
-      </div>
-      <div class="skill-group" data-c="copper">
-        <div class="eyebrow">TOOLS</div>
-        <div class="skill-tags">
-          <span>Wireshark</span><span>Nmap</span><span>Metasploit</span><span>Gobuster</span><span>Hydra</span><span>LinPEAS</span><span>John the Ripper</span><span>Npcap</span><span>Git / GitHub</span><span>Kali Linux</span>
-        </div>
-      </div>
-      <div class="skill-group" data-c="olive">
-        <div class="eyebrow">CTF SKILLS</div>
-        <div class="skill-tags">
-          <span>Reverse Engineering</span><span>Binary Exploitation</span><span>Digital Forensics</span><span>Applied Cryptography</span><span>OSINT</span>
-        </div>
-      </div>
-      <div class="skill-group" data-c="charcoal">
-        <div class="eyebrow">CORE CS</div>
-        <div class="skill-tags">
-          <span>Data Structures &amp; Algorithms</span><span>Operating Systems</span><span>Computer Networks</span><span>Blockchain</span>
-        </div>
-      </div>
-      <div class="skill-group" data-c="rosegold">
-        <div class="eyebrow">LANGUAGES SPOKEN</div>
-        <div class="skill-tags">
-          <span>English — Professional</span><span>Tamil — Native</span>
+        <p>A running set of CTF and structured penetration-testing exercises: unpacking a UPX-packed, XOR-obfuscated ELF binary; exploiting a heap overflow to hijack program execution; recovering secrets from a corrupted disk image via Git commit archaeology; breaking down a captured Diffie–Hellman exchange to recover a shared secret; and geolocating a target from a single image using nothing but visual and metadata clues.</p>
+        <div class="tag-row">
+          <span class="tag">Reverse Engineering</span>
+          <span class="tag">Binary Exploitation</span>
+          <span class="tag">Digital Forensics</span>
+          <span class="tag">Applied Cryptography</span>
+          <span class="tag">OSINT</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-alt" id="education">
+<section class="section-alt" id="gained">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">EDUCATION &amp; CERTIFICATIONS</div>
-      <h2>Foundations</h2>
+      <div class="eyebrow">SKILLS I'VE GAINED</div>
+      <h2>What this work actually taught me</h2>
+      <p>Less a list of tools, more what building and breaking things repeatedly has trained into instinct.</p>
     </div>
 
-    <div class="edu-grid reveal" id="eduGrid">
-      <div class="edu-card">
-        <div class="eyebrow">DEGREE</div>
-        <h3>B.E. Computer Science &amp; Engineering (Cyber Security)</h3>
-        <div class="org">Sathyabama Institute of Science and Technology, Chennai</div>
-        <div class="yr">Expected 2028</div>
+    <div class="gained-grid reveal-stagger">
+      <div class="gained-card">
+        <h4>Thinking in both directions</h4>
+        <p>Building an IDS forces you to think like an attacker just to know what to detect. CTFs forced the reverse — I now default to asking "how would this get exploited" as part of any build, not as an afterthought.</p>
       </div>
+      <div class="gained-card">
+        <h4>Shipping ML beyond a notebook</h4>
+        <p>Training a model is the easy 20%. Getting XGBoost, Random Forest, and Isolation Forest to run inference on live packet flows, in real time, behind a Flask API, taught me the operational half nobody puts in a tutorial.</p>
+      </div>
+      <div class="gained-card">
+        <h4>Reading systems, not just code</h4>
+        <p>Reverse engineering a packed binary or reconstructing Git history from a corrupted disk image is really the same skill: patiently reading a system's behavior when there's no documentation to fall back on.</p>
+      </div>
+      <div class="gained-card">
+        <h4>Communicating risk clearly</h4>
+        <p>Writing security assessment reports at Career Solutions taught me that a finding nobody can act on isn't a finding — it's noise. Clear, prioritized, actionable writing is as much a security skill as the technical work.</p>
+      </div>
+      <div class="gained-card">
+        <h4>Engineering discipline</h4>
+        <p>Debugging and performance work during my full-stack internship, plus proper Git workflows, built the baseline habits — testing before shipping, small reviewable commits — that carry into every project since.</p>
+      </div>
+      <div class="gained-card">
+        <h4>Working without a safety net</h4>
+        <p>CTFs and independent projects come with no instructor and no partial credit. That environment is where I got comfortable being stuck for hours and treating it as normal, not a sign something's wrong.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="edu-card">
-        <div class="eyebrow">CERTIFICATIONS &amp; ACHIEVEMENTS</div>
-        <ul class="cert-list">
-          <li>NPTEL Certified — Cryptography &amp; Network Security (IIT Level), Python, and Java</li>
-          <li>Cisco Junior Cyber Security Analyst Career Path</li>
-          <li>Ethical Hacking Hands-on Training (E-Certificate)</li>
-          <li>Great Learning — C for Beginners</li>
-        </ul>
+<section id="upcoming">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">UPCOMING</div>
+      <h2>What I'm building next: hardware security</h2>
+      <p>My next stretch goal is moving security work off the screen and onto physical hardware — where software assumptions stop holding.</p>
+    </div>
+
+    <div class="upcoming-grid reveal-stagger">
+      <div class="upcoming-card">
+        <div class="upcoming-status">In Progress</div>
+        <h4>Edge-deployed intrusion sensor</h4>
+        <p>Porting CyberGuard's detection pipeline onto a Raspberry Pi–class device, so traffic capture and lightweight ML inference can run entirely on-device — useful for air-gapped networks or environments where a full server isn't practical.</p>
+      </div>
+      <div class="upcoming-card">
+        <div class="upcoming-status">Planned</div>
+        <h4>Embedded &amp; IoT security testing</h4>
+        <p>Getting hands-on with hardware attack surfaces — UART and JTAG access, firmware extraction and analysis, and basic fault-injection concepts — to understand device security below the network layer.</p>
+      </div>
+      <div class="upcoming-card">
+        <div class="upcoming-status">Planned</div>
+        <h4>Physical network tap &amp; sensor</h4>
+        <p>Building a small, purpose-built hardware tap for passive traffic capture on a local network segment, feeding directly into an IDS pipeline without relying on port-mirroring from existing infrastructure.</p>
+      </div>
+      <div class="upcoming-card">
+        <div class="upcoming-status">Exploring</div>
+        <h4>Deeper offensive-security training</h4>
+        <p>Working toward more advanced, hands-on offensive security credentials to formalize the binary exploitation and memory corruption skills I've been building through CTFs.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <canvas id="contact-canvas"></canvas>
+  <canvas id="contact-canvas-works"></canvas>
   <div class="wrap contact-inner">
     <div class="eyebrow on-dark reveal">GET IN TOUCH</div>
     <h2 class="reveal">Let's build something worth defending.</h2>
@@ -695,13 +547,9 @@ section{padding:140px 0;}
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
         sriramj0107@gmial.com
       </a>
-      <a class="contact-link" href="tel:+919025008447">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>
-        +91 90250 08447
-      </a>
-      <a class="contact-link" href="#contact">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-9.3-9A5.4 5.4 0 0 1 12 6a5.4 5.4 0 0 1 9.3 6c-2.3 4.5-9.3 9-9.3 9z"/></svg>
-        Chennai, India
+      <a class="contact-link" href="Sriram_J_Resume.pdf" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16"/></svg>
+        Download Résumé
       </a>
     </div>
     <div class="contact-links reveal" style="margin-top:14px;">
@@ -959,15 +807,14 @@ function createNetworkScene(canvasId, opts){
 }
 
 
-createNetworkScene('network-canvas', {
-  nodeCount: window.innerWidth < 700 ? 46 : 84,
-  bound: {x:11, y:7, z:6},
-  maxDist: 2.5,
-  repelRadius: 2.1,
-  hiliteRadius: 1.5
+createNetworkScene('works-hero-canvas', {
+  nodeCount: window.innerWidth < 700 ? 30 : 54,
+  bound: {x:10, y:5, z:5},
+  maxDist: 2.4,
+  repelRadius: 1.9,
+  hiliteRadius: 1.3
 });
-
-createNetworkScene('contact-canvas', {
+createNetworkScene('contact-canvas-works', {
   nodeCount: window.innerWidth < 700 ? 28 : 50,
   bound: {x:9, y:6, z:5},
   maxDist: 2.3,
